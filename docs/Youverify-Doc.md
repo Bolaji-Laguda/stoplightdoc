@@ -928,4 +928,4 @@ Below are the error codes our systems will generate.
 
 ![](../assets/images/table_2.jpeg)
 
-![](../assets/images/studio-overview.png)
+
