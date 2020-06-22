@@ -791,7 +791,7 @@ Response
 }
 ```
 
-### Check Account Balance
+## Check Account Balance
 
 This endpoint returns your Youverify account balance.
 
@@ -816,7 +816,7 @@ Response
 }
 ```
 
-### Cancel API Call
+## Cancel API Call
 
 This endpoint cancels an initiated call.
 
