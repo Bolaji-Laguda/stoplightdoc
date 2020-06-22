@@ -1,2 +1,2 @@
 # stoplightdoc
-GIt repo for the stoplight documentation
+Git repo for the stoplight documentation
