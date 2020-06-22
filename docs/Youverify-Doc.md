@@ -295,9 +295,7 @@ There are two types of address verification;
 
 Steps to request for an address verification:
 
-**1. Create Candidate**
-
-## candidate
+### 1. Create Candidate
 
 This endpoint creates a candidate.
 
@@ -350,11 +348,10 @@ Response
 }
 ```
 
-**2. Request for Address Verification using the candidate_id**
+### 2. Request for Address Verification using the candidate_id
 
-A. Live Photo Address Verification - individual Address Check
 
-## live_photo
+#### A. Live Photo Address Verification - Individual Address Check
 
 This endpoint initiates an address verification.
 
@@ -503,9 +500,8 @@ Response
 }
 ```
 
-B. Reference Address Verification - Guarantors Address Check
 
-## reference
+#### B. Reference Address Verification - Guarantors Address Check
 
 This endpoint initiates a Guarantors address verification.
 
@@ -638,9 +634,8 @@ Respond
 } 
 ```
 
-C. Business Address Verification
 
-## business_address
+#### C. Business Address Verification
 
 This endpoint initiates a Business Address verification.
 
@@ -796,7 +791,7 @@ Response
 }
 ```
 
-## account_balance
+### Check Account Balance
 
 This endpoint returns your Youverify account balance.
 
@@ -821,7 +816,7 @@ Response
 }
 ```
 
-## cancel
+### Cancel API Call
 
 This endpoint cancels an initiated call.
 
