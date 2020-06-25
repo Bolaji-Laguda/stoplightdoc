@@ -23,7 +23,7 @@ Request Sample
     "Content-Type": "application/json",
     "token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional] \n \"first_name\": \"Doe\", [ optional] \n \"dob\": \"2000-01-01\", [ optional ] \n “subject_consent”: true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required] \n \"last_name\": \"John\", [ required ] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [ required ] \n “subject_consent”: true [required] [Boolean] \n}"
 }
 ```
 
@@ -113,7 +113,7 @@ Request Sample
     "Content-Type": "application/json",
     "token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"frsc\", \n \"reference\": \"xxxxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ leave as is] \n \"first_name\": \"Doe\", [leave as is] \n \"dob\": \"2000-01-01\", [ Required ] \n “subject_consent”: true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"frsc\", \n \"reference\": \"xxxxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [required] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [required] \n “subject_consent”: true [required] [Boolean] \n}"
 }
 ```
 
