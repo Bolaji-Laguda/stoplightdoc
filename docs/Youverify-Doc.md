@@ -922,34 +922,74 @@ Below are the error codes our systems will generate.
 ![](../assets/images/table_1.png)
 ![](../assets/images/table_2.png)
 
-## Test Data
+## Test Data Format
 
 
-BVN
-ID Number: 11111111111
-DOB: 1988-04-04
-FN: John
-MN:
+#### BVN
+
+
+ID Number: 11111111111 
+
+DOB: 1988-04-04 
+
+FN: John 
+
+MN: 
+
 LN: Doe
 
 
-NIN
+
+#### NIN
+
+
 ID Number: 11111111111
+
 DOB: 1988-04-04
+
 FN: Sarah
+
 MN: Jane
+
 LN: Doe
 
 
-Passport 
+
+#### Passport 
+
+
 ID Number: A11111111
+
 DOB: 1988-04-04
+
 FN: Sarah
+
 MN: Jane
+
 LN: Doe
 
 
-INEC
+
+#### INEC
+
+
 ID Number: 00A0A0A000000000000
+
 FN: John
+
+LN: Doe
+
+
+
+#### Drivers License
+
+
+ID Number: AAA00000AA00 - 04 - 04 - 1988
+
+DOB: 1988-04-04
+
+FN: John
+
+MN: Michael
+
 LN: Doe
