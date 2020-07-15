@@ -56,6 +56,21 @@ Response
 }
 ```
 
+#### NIP Test Data 
+
+
+ID Number: A11111111
+
+DOB: 1988-04-04
+
+FN: Sarah
+
+MN: Jane
+
+LN: Doe
+
+
+
 ## Bank Verification Number (BVN)
 
 This endpoints allows you to verify a BVN ID.
@@ -96,6 +111,21 @@ Response
 "status_code": 200 
 }
 ```
+
+#### BVN Test Data
+
+
+ID Number: 11111111111 
+
+DOB: 1988-04-04 
+
+FN: John 
+
+MN: 
+
+LN: Doe
+
+
 
 ## Nigerian Driver's License (NDL)
 
@@ -160,6 +190,21 @@ Response
 "status_code": 200 
 }
 ```
+
+#### NDL Test Data
+
+
+ID Number: AAA00000AA00
+
+DOB: 1988-04-04
+
+FN: John
+
+MN: Michael
+
+LN: Doe
+
+
 
 ## National Identity Number (NIN)
 
@@ -238,6 +283,21 @@ Response
 }
 ```
 
+#### NIN Test Data
+
+
+ID Number: 11111111111
+
+DOB: 1988-04-04
+
+FN: Sarah
+
+MN: Jane
+
+LN: Doe
+
+
+
 ## Bank Verification Number with Facial Match (BVN Facial)
 
 This endpoint allows you to verify a BVN ID with a Facial match.
@@ -285,6 +345,21 @@ Response
 "status_code": 200 
 }
 ```
+
+#### BVN Test Data
+
+
+ID Number: 11111111111 
+
+DOB: 1988-04-04 
+
+FN: John 
+
+MN: 
+
+LN: Doe
+
+
 
 # Youverify Documentation for Address Verification
 
@@ -922,74 +997,4 @@ Below are the error codes our systems will generate.
 ![](../assets/images/table_1.png)
 ![](../assets/images/table_2.png)
 
-## Test Data Format
 
-
-#### BVN
-
-
-ID Number: 11111111111 
-
-DOB: 1988-04-04 
-
-FN: John 
-
-MN: 
-
-LN: Doe
-
-
-
-#### NIN
-
-
-ID Number: 11111111111
-
-DOB: 1988-04-04
-
-FN: Sarah
-
-MN: Jane
-
-LN: Doe
-
-
-
-#### Passport 
-
-
-ID Number: A11111111
-
-DOB: 1988-04-04
-
-FN: Sarah
-
-MN: Jane
-
-LN: Doe
-
-
-
-#### INEC
-
-
-ID Number: 00A0A0A000000000000
-
-FN: John
-
-LN: Doe
-
-
-
-#### Drivers License
-
-
-ID Number: AAA00000AA00 - 04 - 04 - 1988
-
-DOB: 1988-04-04
-
-FN: John
-
-MN: Michael
-
-LN: Doe
