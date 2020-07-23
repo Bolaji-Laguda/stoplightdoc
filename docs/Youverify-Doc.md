@@ -998,3 +998,14 @@ Below are the error codes our systems will generate.
 ![](../assets/images/table_2.png)
 
 
+|  **Codes** | **Error Messages** | **What it means** |
+| :--- | --- | :--- |
+|  422 | {<br/>    "message": "422 Unprocessable Entity",<br/>    "errors": {<br/>        "report_type": [            "The report type field is required."        ]<br/>    },<br/>    "status_code": 422<br/>} | Unprocessible Entity-Validity Error. The sent an invalid payload. IT does not meet validation rule. |
+|  400 | {<br/>    "message": "400 Bad Request",<br/>    "status_code": 400<br/>} | Bad Request - The client has sent a bad request, usually a wrong ID format. |
+|  400 | {<br/>    "message": "You are low on credit",<br/>    "status_code": 400<br/>} | Insufficient fund-The client does not enough funds in their account. |
+|  500 | {<br/>     "message": "The server could not handle the request ",<br/>     "status_code": 500<br/>} | Internal Server Error - The server encountered an error while processing the request. |
+|  404 | {<br/>    "message": "404 Not Found",<br/>    "status_code": 404<br/>} | Not Found - The ID number doesn’t exist. |
+|  401 | {<br/>    "message": "Token does not exist",<br/>    "status_code": 401<br/>} | Token does not exist. Token was not properly referenced. |
+|  403 | {<br/>    "message": "Insufficient Fund",<br/>    "status_code": 403<br/>} | Insufficient fund-The client does not enough funds in their account. |
+|  503 | {<br/>    "message": "Service Unavailable",<br/>    "status_code": 503<br/>} | Connection error-The service is currently unavailable. Try again later. |
+|  504 | {<br/>    "message": "Unable to Connect to FRSC service provider",<br/>    "status_code": 504<br/>} | Service downtime-The service is currently unavailable. Try again later. |
