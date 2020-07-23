@@ -994,9 +994,6 @@ ADDRESS RESPONSE PAYLOAD
 
 Below are the error codes our systems will generate.
 
-![](../assets/images/table_1.png)
-![](../assets/images/table_2.png)
-
 
 |  **Codes** | **Error Messages** | **What it means** |
 | :--- | --- | :--- |
