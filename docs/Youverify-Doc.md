@@ -56,8 +56,7 @@ Response
 }
 ```
 
-#### NIP Test Data 
-
+#### NIP Test Data
 
 ID Number: A11111111
 
@@ -68,8 +67,6 @@ FN: Sarah
 MN: Jane
 
 LN: Doe
-
-
 
 ## Bank Verification Number (BVN)
 
@@ -114,7 +111,6 @@ Response
 
 #### BVN Test Data
 
-
 ID Number: 11111111111 
 
 DOB: 1988-04-04 
@@ -124,8 +120,6 @@ FN: John
 MN: 
 
 LN: Doe
-
-
 
 ## Nigerian Driver's License (NDL)
 
@@ -193,7 +187,6 @@ Response
 
 #### NDL Test Data
 
-
 ID Number: AAA00000AA00
 
 DOB: 1988-04-04
@@ -203,8 +196,6 @@ FN: John
 MN: Michael
 
 LN: Doe
-
-
 
 ## National Identity Number (NIN)
 
@@ -285,7 +276,6 @@ Response
 
 #### NIN Test Data
 
-
 ID Number: 11111111111
 
 DOB: 1988-04-04
@@ -295,8 +285,6 @@ FN: Sarah
 MN: Jane
 
 LN: Doe
-
-
 
 ## Bank Verification Number with Facial Match (BVN Facial)
 
@@ -348,7 +336,6 @@ Response
 
 #### BVN Test Data
 
-
 ID Number: 11111111111 
 
 DOB: 1988-04-04 
@@ -358,8 +345,6 @@ FN: John
 MN: 
 
 LN: Doe
-
-
 
 # Youverify Documentation for Address Verification
 
@@ -424,7 +409,6 @@ Response
 ```
 
 ### 2. Request for Address Verification using the candidate_id
-
 
 #### A. Live Photo Address Verification - Individual Address Check
 
@@ -575,7 +559,6 @@ Response
 }
 ```
 
-
 #### B. Reference Address Verification - Guarantors Address Check
 
 This endpoint initiates a Guarantors address verification.
@@ -708,7 +691,6 @@ Respond
 "status_code": 200
 } 
 ```
-
 
 #### C. Business Address Verification
 
@@ -879,7 +861,9 @@ This endpoint returns your Youverify account balance.
   }
 }
 ```
+
 Response
+
 ```json
 {
     "data": {
@@ -900,12 +884,17 @@ This endpoint cancels an initiated call.
   "method": "get",
   "url": "https://api.staging.youverify.co/reports/report_id/cancel",
   "headers": {
-    "token": "{{token}}"
+    "token": "{{token}}",
+    "Content-Type": "application/json"
   },
-  "body": "{ \n \"reason_for_cancellation\": \"Not sure why\" \n}"
+  "body": {
+    "reason_for_cancellation": "Not sure why"
+  }
 }
 ```
+
 Response
+
 ```json
 {
     "success": true,
@@ -922,11 +911,12 @@ Please follow the following steps;
 
   ▪ Set your webhook (If already set, ignore the next step).
 
-  ▪ Login to https://app.youverify.co, Go to settings -> API KEY & Webhook. Scroll to "Application Webhook" and set your callback URL.
+  ▪ Login to <https://app.youverify.co>, Go to settings -> API KEY & Webhook. Scroll to "Application Webhook" and set your callback URL.
 
 NB. To create your webhook for staging, Please contact Technical Support at support@youverify.co. A status report “PENDING” for Identity services when our upstream identity providers are unavailable. This status enable us to manage the upstream downtime. To get the completed result for a verification with a “PENDING” status, you will have to listen to the webhook to retrieve the completed verification and the corresponding response. The sample below show an identity verification request with a “PENDING” status.
 
 PENDING REQUEST IDENTITY RESPONSE PAYLOAD
+
 ```json
 { 
  "data": { 
@@ -955,9 +945,11 @@ PENDING REQUEST IDENTITY RESPONSE PAYLOAD
 "status_code": 200 
 } 
 ```
+
 The information below is sample post data to your registered webhook for identity verification, immediately the result is ready.
 
 IDENTITY RESPONSE PAYLOAD
+
 ```json
 { 
 'data': { 
@@ -973,9 +965,11 @@ IDENTITY RESPONSE PAYLOAD
 } 
 }; 
 ```
+
 The information below is sample post data to your registered webhook for address verification, immediately the result is ready.
 
 ADDRESS RESPONSE PAYLOAD
+
 ```json
 { 
 'data': { 
@@ -994,15 +988,14 @@ ADDRESS RESPONSE PAYLOAD
 
 Below are the error codes our systems will generate.
 
-
-|  **Codes** | **Error Messages** | **What it means** |
-| :--- | --- | :--- |
-|  422 | {<br/>    "message": "422 Unprocessable Entity",<br/>    "errors": {<br/>        "report_type": [            "The report type field is required."        ]<br/>    },<br/>    "status_code": 422<br/>} | Unprocessible Entity-Validity Error. The sent an invalid payload. IT does not meet validation rule. |
-|  400 | {<br/>    "message": "400 Bad Request",<br/>    "status_code": 400<br/>} | Bad Request - The client has sent a bad request, usually a wrong ID format. |
-|  400 | {<br/>    "message": "You are low on credit",<br/>    "status_code": 400<br/>} | Insufficient fund-The client does not enough funds in their account. |
-|  500 | {<br/>     "message": "The server could not handle the request ",<br/>     "status_code": 500<br/>} | Internal Server Error - The server encountered an error while processing the request. |
-|  404 | {<br/>    "message": "404 Not Found",<br/>    "status_code": 404<br/>} | Not Found - The ID number doesn’t exist. |
-|  401 | {<br/>    "message": "Token does not exist",<br/>    "status_code": 401<br/>} | Token does not exist. Token was not properly referenced. |
-|  403 | {<br/>    "message": "Insufficient Fund",<br/>    "status_code": 403<br/>} | Insufficient fund-The client does not enough funds in their account. |
-|  503 | {<br/>    "message": "Service Unavailable",<br/>    "status_code": 503<br/>} | Connection error-The service is currently unavailable. Try again later. |
-|  504 | {<br/>    "message": "Unable to Connect to FRSC service provider",<br/>    "status_code": 504<br/>} | Service downtime-The service is currently unavailable. Try again later. |
+| **Codes** | **Error Messages**                                                                                                                                                                                     | **What it means**                                                                                   |
+| :-------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------- |
+| 422       | {<br/>    "message": "422 Unprocessable Entity",<br/>    "errors": {<br/>        "report_type": [            "The report type field is required."        ]<br/>    },<br/>    "status_code": 422<br/>} | Unprocessible Entity-Validity Error. The sent an invalid payload. IT does not meet validation rule. |
+| 400       | {<br/>    "message": "400 Bad Request",<br/>    "status_code": 400<br/>}                                                                                                                               | Bad Request - The client has sent a bad request, usually a wrong ID format.                         |
+| 400       | {<br/>    "message": "You are low on credit",<br/>    "status_code": 400<br/>}                                                                                                                         | Insufficient fund-The client does not enough funds in their account.                                |
+| 500       | {<br/>     "message": "The server could not handle the request ",<br/>     "status_code": 500<br/>}                                                                                                    | Internal Server Error - The server encountered an error while processing the request.               |
+| 404       | {<br/>    "message": "404 Not Found",<br/>    "status_code": 404<br/>}                                                                                                                                 | Not Found - The ID number doesn’t exist.                                                            |
+| 401       | {<br/>    "message": "Token does not exist",<br/>    "status_code": 401<br/>}                                                                                                                          | Token does not exist. Token was not properly referenced.                                            |
+| 403       | {<br/>    "message": "Insufficient Fund",<br/>    "status_code": 403<br/>}                                                                                                                             | Insufficient fund-The client does not enough funds in their account.                                |
+| 503       | {<br/>    "message": "Service Unavailable",<br/>    "status_code": 503<br/>}                                                                                                                           | Connection error-The service is currently unavailable. Try again later.                             |
+| 504       | {<br/>    "message": "Unable to Connect to FRSC service provider",<br/>    "status_code": 504<br/>}                                                                                                    | Service downtime-The service is currently unavailable. Try again later.                             |
