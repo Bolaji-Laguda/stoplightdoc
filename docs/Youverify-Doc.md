@@ -419,7 +419,7 @@ Request Sample
 ```json http
 {
   "method": "post",
-  "url": "https://api.staging.youverify.co/v1/candidates/reports/live_photo",
+  "url": "https://api.staging.youverify.co/v1/candidates/{{candidate_id}}/live_photo",
   "headers": {
     "Content-Type": "application/json",
     "token": "{{token}}"
@@ -568,7 +568,7 @@ Request Sample
 ```json http
 {
   "method": "get",
-  "url": "https://api.staging.youverify.co/v1/candidates/candidate_id/reports/references",
+  "url": "https://api.staging.youverify.co/v1/candidates/{{candidate_id}}/references",
   "headers": {
     "Content-Type": "application/json",
     "token": "{{token}}"
@@ -701,7 +701,7 @@ Request Sample
 ```json http
 {
   "method": "post",
-  "url": "https://api.staging.youverify.co/candidates/candidate_id/merchants",
+  "url": "https://api.staging.youverify.co/v1/candidates/{{candidate_id}}/merchants",
   "headers": {
     "Content-Type": "application/json",
     "token": "{{token}}"
