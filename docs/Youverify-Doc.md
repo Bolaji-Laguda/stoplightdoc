@@ -903,6 +903,254 @@ Response
 }
 ```
 
+## States Ids
+
+This endpoint returns the id for all the States.
+
+```json http
+{
+  "method": "get",
+  "url": "https://api.staging.youverify.co/v1/states",
+  "headers": {
+    "Token": "{{token}}"
+  }
+}
+```
+
+Response
+
+```json
+{
+  "data": [
+    {
+    "id": 1,
+    "state": "Abia",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:38"
+    },
+    {
+    "id": 2,
+    "state": "Adamawa",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:38"
+    },
+    {
+    "id": 3,
+    "state": "Anambra",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:38"
+    },
+    {
+    "id": 4,
+    "state": "Akwa Ibom",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:39"
+    },
+    {
+    "id": 5,
+    "state": "Bauchi",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:39"
+    },
+    {
+    "id": 6,
+    "state": "Bayelsa",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:39"
+    },
+    {
+    "id": 7,
+    "state": "Benue",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:39"
+    },
+    {
+    "id": 8,
+    "state": "Borno",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:39"
+    },
+    {
+    "id": 9,
+    "state": "Cross River",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:39"
+    },
+    {
+    "id": 10,
+    "state": "Delta",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:40"
+    },
+    {
+    "id": 11,
+    "state": "Ebonyi",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:40"
+    },
+    {
+    "id": 12,
+    "state": "Enugu",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:40"
+    },
+    {
+    "id": 13,
+    "state": "Edo",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:40"
+    },
+    {
+    "id": 14,
+    "state": "Ekiti",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:40"
+    },
+    {
+    "id": 15,
+    "state": "Abuja",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:40"
+    },
+    {
+    "id": 16,
+    "state": "Gombe",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:41"
+    },
+    {
+    "id": 17,
+    "state": "Imo",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:41"
+    },
+    {
+    "id": 18,
+    "state": "Jigawa",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:41"
+    },
+    {
+    "id": 19,
+    "state": "Kaduna",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:41"
+    },
+    {
+    "id": 20,
+    "state": "Kano",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:41"
+    },
+    {
+    "id": 21,
+    "state": "Katsina",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:41"
+    },
+    {
+    "id": 22,
+    "state": "Kebbi",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:42"
+    },
+    {
+    "id": 23,
+    "state": "Kogi",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:42"
+    },
+    {
+    "id": 24,
+    "state": "Kwara",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:42"
+    },
+    {
+    "id": 25,
+    "state": "Lagos",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:42"
+    },
+    {
+    "id": 26,
+    "state": "Nasarawa",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:42"
+    },
+    {
+    "id": 27,
+    "state": "Niger",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:42"
+    },
+    {
+    "id": 28,
+    "state": "Ogun",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:43"
+    },
+    {
+    "id": 29,
+    "state": "Ondo",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:43"
+    },
+    {
+    "id": 30,
+    "state": "Osun",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:43"
+    },
+    {
+    "id": 31,
+    "state": "Oyo",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:43"
+    },
+    {
+    "id": 32,
+    "state": "Plateau",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:43"
+    },
+    {
+    "id": 33,
+    "state": "Rivers",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:43"
+    },
+    {
+    "id": 34,
+    "state": "Sokoto",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:44"
+    },
+    {
+    "id": 35,
+    "state": "Taraba",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:44"
+    },
+    {
+    "id": 36,
+    "state": "Yobe",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:44"
+    },
+    {
+    "id": 37,
+    "state": "Zamfara",
+    "is_active": 1,
+    "created_at": "2019-06-26 14:35:44"
+    }
+  ],
+  "message": "Successful",
+  "status_code": 200
+}
+
+```
+
 ## Webhook Guide
 
 Webhook get pushed when the address or identity has been completed.
