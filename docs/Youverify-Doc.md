@@ -567,7 +567,7 @@ Request Sample
 
 ```json http
 {
-  "method": "get",
+  "method": "post",
   "url": "https://api.staging.youverify.co/v1/candidates/{{candidate_id}}/references",
   "headers": {
     "Content-Type": "application/json",
