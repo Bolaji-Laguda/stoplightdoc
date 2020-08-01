@@ -21,7 +21,7 @@ Request Sample
   "url": "https://api.staging.youverify.co/v1/identities/candidates/check",
   "headers": {
     "Content-Type": "application/json",
-    "token": "{{token}}"
+    "Token": "{{token}}"
   },
   "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required] \n \"last_name\": \"John\", [ required ] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [ required ] \n “subject_consent”: true [required] [Boolean] \n}"
 }
@@ -80,7 +80,7 @@ Request Sample
   "url": "https://api.staging.youverify.co/v1/identities/candidates/check",
   "headers": {
     "Content-Type": "application/json",
-    "token": "{{token}}"
+    "Token": "{{token}}"
   },
   "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"ibvn\", \n \"reference\": \"xxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n “subject_consent”: true [required] [Boolean] \n}"
 }
@@ -135,7 +135,7 @@ Request Sample
   "url": "https://api.staging.youverify.co/v1/identities/candidates/check",
   "headers": {
     "Content-Type": "application/json",
-    "token": "{{token}}"
+    "Token": "{{token}}"
   },
   "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"frsc\", \n \"reference\": \"xxxxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [required] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [required] \n “subject_consent”: true [required] [Boolean] \n}"
 }
@@ -209,7 +209,7 @@ Request Sample
   "url": "https://api.staging.youverify.co/v1/identities/candidates/check",
   "headers": {
     "Content-Type": "application/json",
-    "token": "{{token}}"
+    "Token": "{{token}}"
   },
   "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"nin\", \n \"reference\": \"xxxxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n “subject_consent”: true [required] [Boolean] \n}"
 }
@@ -298,7 +298,7 @@ Request Sample
   "url": "https://api.staging.youverify.co/v1/identities/candidates/check",
   "headers": {
     "Content-Type": "application/json",
-    "token": "{{token}}"
+    "Token": "{{token}}"
   },
   "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"bvn_facial\", \n \"reference\": \"xxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"image\": \"{Base64 string less than 1MB}\", [required] – Image to be\n  compared with BVN image \n “subject_consent”: true [required] [Boolean] \n}"
 }
@@ -367,7 +367,7 @@ Request Sample
   "url": "https://api.staging.youverify.co/v1/candidates",
   "headers": {
     "Content-Type": "application/json",
-    "token": "{{token}}"
+    "Token": "{{token}}"
   },
   "body": "{ \n \"first_name\": \"\" [required], \n \"middle_name\": \"\"[optional] , \n \"last_name\": \"\" [required], \n \"gender\": \"\" [optional] , \n \"dob\": \"\" [required], \n \"email\": \"\" [required id mobile is not set], \n \"mobile\": \"\" [required if email is not set], \n \"country\": \"Nigeria\", \n \"mothers_maiden_name\": \"\",[optional] \n \"previous_last_name\": \"\",[optional] \n \"nationality\": \"\",[optional] \n \"country_of_birth\": \"\",[optional] \n \"town_of_birth\": \"\"[optional] \n}"
 }
@@ -422,7 +422,7 @@ Request Sample
   "url": "https://api.staging.youverify.co/v1/candidates/{{candidate_id}}/live_photo",
   "headers": {
     "Content-Type": "application/json",
-    "token": "{{token}}"
+    "Token": "{{token}}"
   },
   "body": "{ \n \"description\": \"Address Description\", [optional] \n \"address\": \n { \n  \"flat_number\": \" \", [optional] \n  \"building_name\": \" \", [optional] \n  \"building_number\": \" \", [optional] \n  \"street\": \" \",[required] \n  \"sub_street\": \" \", [optional] \n  \"landmark\": \" \", [required] \n  \"state\":\" \", [required] \n  \"city\": \" \", [required] \n  \"postcode\": \" \", [optional] \n  \"country\": \"Nigeria\" [required] \n  }, \n \"images\": [ \"base64 encode of image\" ] [required] \n}"
 }
@@ -571,7 +571,7 @@ Request Sample
   "url": "https://api.staging.youverify.co/v1/candidates/{{candidate_id}}/references",
   "headers": {
     "Content-Type": "application/json",
-    "token": "{{token}}"
+    "Token": "{{token}}"
   },
   "body": "{ \n \"notes\":\"\", \n \"reference\": { \"first_name\": \"\", [required] \n \"last_name\": \"\", [required] \"email\": \"\", [required] \n \"mobile\": \"\", [required] \n \"image\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/ 2wCEAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE\" [required] \n }, \n \"address\": { \"flat_number\": \"\", [optional] \n \"building_name\": \"\", [optional] \n \"building_number\": \"\", [optional] \n \"street\": \"\",[required] \n \"sub_street\": \"\", [optional] \n \"landmark\": \"\", [required] \n \"state\":\"\", [required] \n \"city\": \"\", [required] \n \"postcode\": \"\", [optional] \n \"country\": \"Nigeria\" [required] \n }, \n}"
 }
@@ -704,7 +704,7 @@ Request Sample
   "url": "https://api.staging.youverify.co/v1/candidates/{{candidate_id}}/merchants",
   "headers": {
     "Content-Type": "application/json",
-    "token": "{{token}}"
+    "Token": "{{token}}"
   },
   "body": {
     "merchant": {
@@ -857,7 +857,7 @@ This endpoint gets all reports.
   "method": "get",
   "url": "https://api.staging.youverify.co/v1/reports",
   "headers": {
-    "token": "{{token}}"
+    "Token": "{{token}}"
   }
 }
 ```
@@ -4482,7 +4482,7 @@ This endpoint returns your Youverify account balance.
   "method": "get",
   "url": "https://api.staging.youverify.co/v1/check_balance",
   "headers": {
-    "token": "{{token}}"
+    "Token": "{{token}}"
   }
 }
 ```
@@ -4507,9 +4507,9 @@ This endpoint cancels an initiated call.
 ```json http
 {
   "method": "get",
-  "url": "https://api.staging.youverify.co/reports/report_id/cancel",
+  "url": "https://api.staging.youverify.co/v1/reports/{{report_id}}/cancel",
   "headers": {
-    "token": "{{token}}",
+    "Token": "{{token}}",
     "Content-Type": "application/json"
   },
   "body": {
