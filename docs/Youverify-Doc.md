@@ -68,6 +68,65 @@ MN: Jane
 
 LN: Doe
 
+## Permanent Voters Card (PVC)
+
+This endpoint allows you to verify a PVC ID.
+
+Request Sample
+
+```json http
+{
+  "method": "post",
+  "url": "https://api.staging.youverify.co/v1/identities/candidates/check",
+  "headers": {
+    "Content-Type": "application/json",
+    "Token": "{{token}}"
+  },
+  "body": {
+    "report_type": "identity",
+    "type": "inec",
+    "reference": "00A0A0A000000000000",
+    "first_name": "John",
+    "last_name": "Doe",
+    "dob": "04-04-1988"
+  }
+}
+```
+
+Response
+
+```json
+{
+    "data": {
+        "id": "reports_08a2e83a-4ca5-4f5d-b006-b16e48e66f41",
+        "reference_id": "5f2e90ca155ab",
+        "response": {
+            "first_name": "John",
+            "last_name": "Doe",
+            "middle_name": "",
+            "dob": "1990-04-04",
+            "mobile": null,
+            "gender": "Male",
+            "reference_id": "00a0a0a000000000000"
+        },
+        "type": "inec",
+        "task_created_by": "Chinook Devops"
+    },
+    "message": "Successful",
+    "status_code": 200
+}
+```
+
+#### PVC Test Data
+
+ID Number: 00A0A0A000000000000
+
+FN: John
+
+LN: Doe
+
+DOB: 04-04-1988
+
 ## Bank Verification Number (BVN)
 
 This endpoints allows you to verify a BVN ID.
