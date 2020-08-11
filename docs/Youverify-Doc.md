@@ -407,10 +407,11 @@ LN: Doe
 
 # Youverify Documentation for Address Verification
 
-There are two types of address verification; 
+There are three types of address verification; 
 
 1. Live Photo Address verification - Individual Address check 
 2. Reference Address Verification - Individual Guarantor's Address Check 
+3. Business Address Verification
 
 Steps to request for an address verification:
 
