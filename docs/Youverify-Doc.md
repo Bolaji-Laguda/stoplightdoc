@@ -1,13 +1,13 @@
 # Youverify Documentation for Identity
 
-- The Youverify API is a RESTful web service for developers to programmatically interact with Youverify’s data and functionality.
-- Every bit of data exchanged between clients and the API is JSON over HTTPS.
-- The base URL for the Youverify Staging API is <https://api.staging.youverify.co> while the live API endpoint is <https://api.youverify.co>,
-- All endpoint should be prefix with v1 e.g <https://api.staging.youverify.co/v1> for staging and while live is <https://api.youverify.co/v1>
-- All sample requests in this documentation are formatted for cURL.
-- All parameters, where relevant, are required unless otherwise specified.
-- If you have questions about using the API, want to share some feedback, or have come across a bug you'd like to report, write us an email at developer@youverify.co
-- Youverify API uses key based authentication method. You can get a key from settings(<https://developer.youverify.co>)
+-   The Youverify API is a RESTful web service for developers to programmatically interact with Youverify’s data and functionality.
+-   Every bit of data exchanged between clients and the API is JSON over HTTPS.
+-   The base URL for the Youverify Staging API is <https://api.staging.youverify.co> while the live API endpoint is <https://api.youverify.co>,
+-   All endpoint should be prefix with v1 e.g <https://api.staging.youverify.co/v1> for staging and while live is <https://api.youverify.co/v1>
+-   All sample requests in this documentation are formatted for cURL.
+-   All parameters, where relevant, are required unless otherwise specified.
+-   If you have questions about using the API, want to share some feedback, or have come across a bug you'd like to report, write us an email at [developer@youverify.co](mailto:developer@youverify.co)
+-   Youverify API uses key based authentication method. You can get a key from settings(<https://developer.youverify.co>)
 
 ## Nigerian International Passport (NIP)
 
@@ -23,7 +23,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required] \n \"last_name\": \"John\", [ required ] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [ required ] \n “subject_consent”: true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required] \n \"last_name\": \"John\", [ required ] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [ required ] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
@@ -141,7 +141,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"ibvn\", \n \"reference\": \"xxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n “subject_consent”: true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"ibvn\", \n \"reference\": \"xxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
@@ -196,7 +196,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"frsc\", \n \"reference\": \"xxxxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [required] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [required] \n “subject_consent”: true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"frsc\", \n \"reference\": \"xxxxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [required] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [required] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
@@ -270,7 +270,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"nin\", \n \"reference\": \"xxxxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n “subject_consent”: true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"nin\", \n \"reference\": \"xxxxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
@@ -359,7 +359,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"bvn_facial\", \n \"reference\": \"xxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"image\": \"{Base64 string less than 1MB}\", [required] – Image to be\n  compared with BVN image \n “subject_consent”: true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"bvn_facial\", \n \"reference\": \"xxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"image\": \"{Base64 string less than 1MB}\", [required] – Image to be\n  compared with BVN image \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
@@ -409,9 +409,9 @@ LN: Doe
 
 There are three types of address verification; 
 
-1. Live Photo Address verification - Individual Address check 
-2. Reference Address Verification - Individual Guarantor's Address Check 
-3. Business Address Verification
+1.  Live Photo Address verification - Individual Address check 
+2.  Reference Address Verification - Individual Guarantor's Address Check 
+3.  Business Address Verification
 
 Steps to request for an address verification:
 
@@ -4846,7 +4846,7 @@ Please follow the following steps;
 
   ▪ Login to <https://app.youverify.co>, Go to settings -> API KEY & Webhook. Scroll to "Application Webhook" and set your callback URL.
 
-NB. To create your webhook for staging, Please contact Technical Support at support@youverify.co. A status report “PENDING” for Identity services when our upstream identity providers are unavailable. This status enable us to manage the upstream downtime. To get the completed result for a verification with a “PENDING” status, you will have to listen to the webhook to retrieve the completed verification and the corresponding response. The sample below show an identity verification request with a “PENDING” status.
+NB. To create your webhook for staging, Please contact Technical Support at [support@youverify.co.](mailto:support@youverify.co.) A status report “PENDING” for Identity services when our upstream identity providers are unavailable. This status enable us to manage the upstream downtime. To get the completed result for a verification with a “PENDING” status, you will have to listen to the webhook to retrieve the completed verification and the corresponding response. The sample below show an identity verification request with a “PENDING” status.
 
 PENDING REQUEST IDENTITY RESPONSE PAYLOAD
 
