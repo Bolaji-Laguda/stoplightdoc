@@ -4905,16 +4905,175 @@ ADDRESS RESPONSE PAYLOAD
 
 ```json
 { 
-'data': { 
-'id' : 'reports_424380ae-5e6a-425b-abcb-24e082e4a7a5', 
-'status' : 'completed | failed', 
-'task_status' : 'NOT VERIFIED ' | 'VERIFIED', 
-'package_name' : 'Live Photo Address Verification | Reference Check | Merchant Verification, 
-'candidate_id' : 3388, 
-'package' : 'live_photo | reference_check | merchant_verification', 
-'is_flagged' : 0 | 1, 
-} 
-};
+  "data": { 
+  "id" : "reports_424380ae-5e6a-425b-abcb-24e082e4a7a5", 
+  "report": {
+    "id": "381b87f0-f496-4052-a98e-8cb4c52b5fce",
+    "reference_id": "5a1d27d09163d",
+    "candidate": {
+      "id": "34ae16a6-a527-4759-8d66-fe5d27a4361b",
+      "reference_id": "YV5a1d27c8c1d16",
+      "name": "Akomolafe Tosin",
+      "first_name": "Tosin",
+      "last_name": "Akomolafe",
+      "middle_name": "",
+      "email": "gettosin4me@gmail.com",
+      "mobile": "08091213344",
+      "has_live_photo": true,
+      "live_photo_path": "http://api.youverify.local/uploads/tasks/livephoto/photo5a1d27d0798da1087.jpeg"
+    },
+    "start_time": "2018-03-06",
+    "end_time": "2018-03-08",
+    "execution_date": "2019-02-26 17:54:03",
+    "revalidation_date": "2018-06-08",
+    "status": "canceled",
+    "task_status": "VERIFIED",
+    "task_created_by": "Chinook Developer",
+    "package": "live_photo",
+    "download_url": null,
+    "description": "",
+    "package_name": "Live Photo Address Verification",
+    "details": {
+      "uuid": "fa234602-49f6-48ec-9a8f-aaa569109eb7",
+      "address_id": 1,
+      "candidate_id": 1,
+      "photo_url": null,
+      "status": "VERIFIED",
+      "reason_for_fail": null,
+      "deleted_at": null,
+      "created_at": "2017-11-28 10:09:36",
+      "updated_at": "2018-02-13 15:50:59",
+      "images": [
+        {
+          "id": 1,
+          "uuid": "4cc6361e-791e-44c0-b797-9261fcc47a0c",
+          "live_photo_id": 1,
+          "candidate_id": 1,
+          "image_type": "image/jpeg",
+          "image_extension": "jpeg",
+          "path": "/",
+          "image_name": "photo5a1d27d0798da1087.jpeg",
+          "deleted_at": null,
+          "created_at": "2017-11-28 10:09:36",
+          "updated_at": "2017-11-28 10:09:36",
+          "image_path": "http://api.youverify.local/uploads/tasks/livephoto/photo5a1d27d0798da1087.jpeg"
+        }
+      ],
+      "address": {
+        "uuid": "73df8ed4-6d35-446a-8af0-54b60b88153a",
+        "user_id": 1,
+        "user_type": "partner",
+        "candidate_id": 1,
+        "flat_number": "",
+        "building_name": "",
+        "building_number": "13B",
+        "sub_street": "",
+        "street": "Bishop street",
+        "landmark": "",
+        "state": "Lagos",
+        "city": "Ilupeju",
+        "post_code": "",
+        "country": "Nigeria",
+        "longitude": "3.3598313",
+        "latitude": "6.551594499999999",
+        "what3words": "outdone.sprain.times",
+        "what3words_map": "http://w3w.co/outdone.sprain.times",
+        "agent_geo": "",
+        "start_date": "",
+        "end_date": "",
+        "status": "PENDING",
+        "reason_for_fail": null,
+        "item_id": "0",
+        "item_type": "live_photo",
+        "created_at": "2017-11-28 10:09:36",
+        "updated_at": "2017-11-28 10:09:36",
+        "formatted": "13b, Bishop  Street, Ilupeju, Lagos, Nigeria, ",
+        "map_format": "13b Bishop Street, Ilupeju , Lagos, Nigeria",
+        "map_address_url": null,
+        "map_geolocation_url": null
+      },
+      "live_photos": [
+        {
+          "id": 1,
+          "uuid": "4cc6361e-791e-44c0-b797-9261fcc47a0c",
+          "live_photo_id": 1,
+          "candidate_id": 1,
+          "image_type": "image/jpeg",
+          "image_extension": "jpeg",
+          "path": "/",
+          "image_name": "photo5a1d27d0798da1087.jpeg",
+          "deleted_at": null,
+          "created_at": "2017-11-28 10:09:36",
+          "updated_at": "2017-11-28 10:09:36",
+          "image_path": "http://api.youverify.local/uploads/tasks/livephoto/photo5a1d27d0798da1087.jpeg"
+        }
+      ]
+    },
+    "has_address": true,
+    "notes": [
+      {
+        "id": 1,
+        "report_id": 1000,
+        "agent_id": 1,
+        "note": "This address is verified. It is a bluish green duplex with gray gate. Confirmed by security.",
+        "created_at": "2018-02-13 15:51:08",
+        "updated_at": "2018-02-13 15:51:08",
+        "formatted_time": "13 Feb, 2018 03:51:pm"
+      },
+      {
+        "id": 2,
+        "report_id": 1000,
+        "agent_id": 1,
+        "note": "This address is verified. It is a bluish green duplex with gray gate. Confirmed by security.",
+        "created_at": "2018-02-13 15:51:08",
+        "updated_at": "2018-02-13 15:51:08",
+        "formatted_time": "13 Feb, 2018 03:51:pm"
+      },
+      {
+        "id": 3,
+        "report_id": 1000,
+        "agent_id": 1,
+        "note": "This address is verified. It is a bluish green duplex with gray gate. Confirmed by security.",
+        "created_at": "2018-02-13 15:51:08",
+        "updated_at": "2018-02-13 15:51:08",
+        "formatted_time": "13 Feb, 2018 03:51:pm"
+      }
+    ],
+    "signature": [
+      "iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC0ElEQVRIibWVMWgTURjHf+9yOUPPEIu0NClKqg5C6RJFoYOISDft5NAxoFPJIAqKi3UpOjkUcXDIJA46uGQpKi46VGmG0iqCNLa2DYUGY5t6Jtd3Dt7Vd68Xi0I/eLz3uPv+/+9773v/D/bYxC7fjTZrANlmHTJzF2BDGzpBMNoSRRGogKY/DGUOgFxlDtY7SHQCHdhKDaYO9FzqKcTs2JAwRRbAc73KVmNrsvq0OlF/W/8GNBWiEIloA24BVvZm9px91L4vTJGJyBTP9ZYbnxtXK3crr3ySgGj76HSCADyRvZE9bx+3nwgEue4c+YE8/Qf7AZhdm6U4U2R6dRoPj8bHxkjlXuUF4GgkxLTo48C+5IlkV9dQ12NhiOTlgcuMnxmnL9WHHbex4zbZVJbhY8O40qW8WiZ+ID7oLDvPmitNh/DFe3oZmoCVHkmPClNkct05CrkChtALCAxhUMgVyHXnEKbIpEfSo372ajFElqNpJs3zAPmBfCS4SpIfyAPg+5hoZR2VgSlMcRjYPvO/WfCP76OWdSgDdd8+5N1th38kmGzJr/C7Wnaz4J/AJ4oxhA1It+a+BijOFJFeW5lBepLiTBEA30eXjlCZCn82nUXnU+p06mLVqe53pcup9CmECOui9CQT0xOU5kvIpqwuPly83lprfef3W2gFZDHFR/iEsdZaS1oZ60viUOJCebXM1MoUnYlO7LjNZmuTd9V3jL0ZozRfwsOjPlW/VpusfeDPQ2sBW4AXhBVcjgUkgA5gf++V3rOpk6nbhmX0RB5RU1br7+t3lh4tvQY2gE2FJJSBFwWwPr2+tDG3Ueo40oGwRFLERAcernRkpVltPl94sHCr9rI25wP/AH4q0UdqUUjs/GwSyl6V60DcHCXqHWKnynVw+6rkBnqvPyC1D6jAIXA9Az2T/2k4O8q0XU/+15YZ2c3+RqAT6WsdrP1r3Gv7BW4wIvqstIdzAAAAAElFTkSuQmCC"
+    ],
+    "is_flagged": 1,
+    "reportable_id": "fa234602-49f6-48ec-9a8f-aaa569109eb7",
+    "created_at": "2017-11-28 10:09:36",
+    "last_updated_at": "2019-02-26 17:54:03",
+    "what3words": "NULL",
+    "what3words_map_link": "NULL",
+    "digital_address_code": "NULL",
+    "digital_address_url": "NULL",
+    "map_address_url": null,
+    "map_geolocation_url": null,
+    "report_geolocation_url": null,
+    "report_longitude": null,
+    "report_latitude": null,
+    "can_view_report": true,
+    "reasons_for_failure": [
+      "Address does not exist",
+      "Address not accessible",
+      "Candidate does not live there"
+    ],
+    "submission_distance_in_meters": 0,
+    "images": {
+      "data": []
+    },
+  "status" : "completed | failed", 
+  "task_status" : "NOT VERIFIED | VERIFIED", 
+  "package_name" : "Live Photo Address Verification | Reference Check | Merchant Verification", 
+  "candidate_id" : 3388, 
+  "package" : "live_photo | reference_check | merchant_verification", 
+  "is_flagged" : "0 | 1"
+  } 
+}
+}
 ```
 
 ## Error Codes
