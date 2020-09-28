@@ -3786,7 +3786,7 @@ The endpoint returns all the candidates you have checked.
 
 ```json http
 {
-  "method": "get",
+  "method": "post",
   "url": "https://api.staging.youverify.co/v1/candidates",
   "headers": {
     "Token": "{{token}}"
