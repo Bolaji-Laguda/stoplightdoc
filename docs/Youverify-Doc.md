@@ -5076,6 +5076,9 @@ ADDRESS RESPONSE PAYLOAD
 }
 ```
 
+NB: Please note that that the above symbol " | " is used to differentiate the possible outcomes.
+
+
 ## Error Codes
 
 Below are the error codes our systems will generate.
