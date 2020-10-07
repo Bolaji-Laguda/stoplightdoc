@@ -1,4 +1,6 @@
-# Youverify Documentation for Identity
+# Youverify Documentation 
+
+## Identity Verification API's
 
 -   The Youverify API is a RESTful web service for developers to programmatically interact with Youverify’s data and functionality.
 -   Every bit of data exchanged between clients and the API is JSON over HTTPS.
@@ -405,7 +407,7 @@ MN:
 
 LN: Doe
 
-# Youverify Documentation for Address Verification
+## Address Verification API's
 
 There are three types of address verification; 
 
