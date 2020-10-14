@@ -25,7 +25,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required][alphanumeric]\n \"last_name\": \"John\", [ required ] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [ required ] \n \"subject_consent\": true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required][alphanumeric]\n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
@@ -98,7 +98,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{\n  \"report_type\": \"identity\",\n  \"type\": \"inec\",\n  \"reference\": \"00A0A0A000000000000\",[required][alphanumeric]\n  \"first_name\": \"John\",[required]\n  \"last_name\": \"Doe\",[required]\n  \"dob\": \"04-04-1988\" [required]\n}"
+  "body": "{\n  \"report_type\": \"identity\",\n  \"type\": \"inec\",\n  \"reference\": \"00A0A0A000000000000\",[required][alphanumeric]\n  \"first_name\": \"John\",[optional]\n  \"last_name\": \"Doe\",[optional]\n  \"dob\": \"04-04-1988\" [optional]\n}"
 }
 ```
 
@@ -233,7 +233,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"frsc\", \n \"reference\": \"xxxxxxxxxxxxx\", [required][alphanumeric] \n \"last_name\": \"John\", [required] \n \"first_name\": \"Doe\", [required] \n \"dob\": \"2000-01-01\", [required] \n \"subject_consent\": true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"frsc\", \n \"reference\": \"xxxxxxxxxxxxx\", [required][alphanumeric] \n \"last_name\": \"John\", [optional] \n \"first_name\": \"Doe\", [optional] \n \"dob\": \"2000-01-01\", [optional] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
