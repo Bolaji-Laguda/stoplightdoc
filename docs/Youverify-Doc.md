@@ -570,12 +570,12 @@ Request Sample
 ```json http
 {
   "method": "post",
-  "url": "https://api.staging.youverify.co/v1/candidates/{{candidate_id}}/live_photo",
+  "url": "https://api.staging.youverify.co/v1/candidates/%7Bcandidate_id%7D/live_photo",
   "headers": {
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"description\": \"Address Description\", [optional] \n \"address\": \n { \n  \"flat_number\": \" \", [optional] \n  \"building_name\": \" \", [optional] \n  \"building_number\": \" \", [required] \n  \"street\": \" \",[required] \n  \"sub_street\": \" \", [optional] \n  \"landmark\": \" \", [required] \n  \"state\":\" \", [required] \n  \"city\": \" \", [required] \n  \"postcode\": \" \", [optional] \n  \"country\": \"Nigeria\" [required] \n  }, \n \"images\": [ \"base64 encode of image\" ] [required] \n}"
+  "body": "{ \n \"description\": \"Address Description\", [optional] \n \"address\": \n { \n  \"flat_number\": \" \", [optional] \n  \"building_name\": \" \", [optional] \n  \"building_number\": \" \", [required] \n  \"street\": \" \",[required] \n  \"sub_street\": \" \", [optional] \n  \"landmark\": \" \", [required] \n  \"state\":\" \", [required] \n  \"city\": \" \", [required] \n  \"postcode\": \" \", [optional] \n  \"country\": \"Nigeria\" [required] \n  }, \n \"images\": [\"base64 encoded image/logo or url of image/logo\"][required] \n}"
 }
 ```
 
@@ -719,12 +719,12 @@ Request Sample
 ```json http
 {
   "method": "post",
-  "url": "https://api.staging.youverify.co/v1/candidates/{{candidate_id}}/references",
+  "url": "https://api.staging.youverify.co/v1/candidates/%7Bcandidate_id%7D/references",
   "headers": {
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"notes\":\"\", \n \"reference\": { \"first_name\": \"\", [required] \n \"last_name\": \"\", [required] \"email\": \"\", [required] \n \"mobile\": \"\", [required] \n \"image\": \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/ 2wCEAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE\" [required] \n }, \n \"address\": { \"flat_number\": \"\", [optional] \n \"building_name\": \"\", [optional] \n \"building_number\": \"\", [optional] \n \"street\": \"\",[required] \n \"sub_street\": \"\", [optional] \n \"landmark\": \"\", [required] \n \"state\":\"\", [required] \n \"city\": \"\", [required] \n \"postcode\": \"\", [optional] \n \"country\": \"Nigeria\" [required] \n }, \n}"
+  "body": "{ \n \"notes\":\"\", \n \"reference\": { \"first_name\": \"\", [required] \n \"last_name\": \"\", [required] \"email\": \"\", [required] \n \"mobile\": \"\", [required] \n \"image\": [\"base64 encoded image/logo or url of image/logo\"] [required] \n }, \n \"address\": { \"flat_number\": \"\", [optional] \n \"building_name\": \"\", [optional] \n \"building_number\": \"\", [optional] \n \"street\": \"\",[required] \n \"sub_street\": \"\", [optional] \n \"landmark\": \"\", [required] \n \"state\":\"\", [required] \n \"city\": \"\", [required] \n \"postcode\": \"\", [optional] \n \"country\": \"Nigeria\" [required] \n }, \n}"
 }
 ```
 
