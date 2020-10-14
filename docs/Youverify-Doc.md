@@ -1,4 +1,4 @@
-# Youverify Documentation 
+# Youverify Documentation
 
 ## Identity Verification API's
 
@@ -25,11 +25,11 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required] \n \"last_name\": \"John\", [ required ] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [ required ] \n \"subject_consent\": true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required][alphanumeric]\n \"last_name\": \"John\", [ required ] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [ required ] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
-Response
+Successful response
 
 ```json
  { 
@@ -55,6 +55,20 @@ Response
     }, 
 "message": "Successful", 
 "status_code": 200 
+}
+```
+
+Failed response
+
+```json
+{
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "reference": [
+            "The reference field is required."
+        ]
+    },
+    "status_code": 422
 }
 ```
 
@@ -84,18 +98,11 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": {
-    "report_type": "identity",
-    "type": "inec",
-    "reference": "00A0A0A000000000000",
-    "first_name": "John",
-    "last_name": "Doe",
-    "dob": "04-04-1988"
-  }
+  "body": "{\n  \"report_type\": \"identity\",\n  \"type\": \"inec\",\n  \"reference\": \"00A0A0A000000000000\",[required][alphanumeric]\n  \"first_name\": \"John\",[required]\n  \"last_name\": \"Doe\",[required]\n  \"dob\": \"04-04-1988\" [required]\n}"
 }
 ```
 
-Response
+Successful response
 
 ```json
 {
@@ -116,6 +123,20 @@ Response
     },
     "message": "Successful",
     "status_code": 200
+}
+```
+
+Failed response
+
+```json
+{
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "reference": [
+            "The reference field is required."
+        ]
+    },
+    "status_code": 422
 }
 ```
 
@@ -143,11 +164,11 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"ibvn\", \n \"reference\": \"xxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"subject_consent\": true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"ibvn\", \n \"reference\": \"xxxxxxxxxxx\", [required][String]\n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
-Response
+Successful response
 
 ```json
 { 
@@ -167,6 +188,20 @@ Response
 }, 
 "message": "Successful", 
 "status_code": 200 
+}
+```
+
+Failed response
+
+```json
+{
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "reference": [
+            "The reference field is required."
+        ]
+    },
+    "status_code": 422
 }
 ```
 
@@ -198,11 +233,11 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"frsc\", \n \"reference\": \"xxxxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [required] \n \"first_name\": \"Doe\", [ required ] \n \"dob\": \"2000-01-01\", [required] \n \"subject_consent\": true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"frsc\", \n \"reference\": \"xxxxxxxxxxxxx\", [required][alphanumeric] \n \"last_name\": \"John\", [required] \n \"first_name\": \"Doe\", [required] \n \"dob\": \"2000-01-01\", [required] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
-Response
+Successful response
 
 ```json
  { 
@@ -246,6 +281,29 @@ Response
 }
 ```
 
+Failed response
+
+```json
+{
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "reference": [
+            "The reference field is required."
+        ],
+        "dob": [
+            "The dob field is required."
+        ],
+        "first_name": [
+            "The first name field is required."
+        ],
+        "last_name": [
+            "The last name field is required."
+        ]
+    },
+    "status_code": 422
+}
+```
+
 #### NDL Test Data
 
 ID Number: AAA00000AA00
@@ -272,11 +330,11 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"nin\", \n \"reference\": \"xxxxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"subject_consent\": true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"nin\", \n \"reference\": \"xxxxxxxxxxxxx\", [required][numeric] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
-Response
+Successful response
 
 ```json
 { 
@@ -335,6 +393,20 @@ Response
 }
 ```
 
+Failed response
+
+```json
+{
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "reference": [
+            "The reference field is required."
+        ]
+    },
+    "status_code": 422
+}
+```
+
 #### NIN Test Data
 
 ID Number: 11111111111
@@ -361,11 +433,11 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"bvn_facial\", \n \"reference\": \"xxxxxxxxxxx\", [required] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"image\": \"{Base64 string less than 1MB}\", [required] – Image to be\n  compared with BVN image \n \"subject_consent\": true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"bvn_facial\", \n \"reference\": \"xxxxxxxxxxx\", [required][string] \n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"image\": \"{Base64 string less than 1MB}\", [required] – Image to be\n  compared with BVN image \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
-Response
+Successful response
 
 ```json
 { 
@@ -392,6 +464,23 @@ Response
  }, 
 "message": "Successful", 
 "status_code": 200 
+}
+```
+
+Failed response
+
+```json
+{
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "reference": [
+            "The reference field is required."
+        ],
+        "image": [
+            "The image field is required."
+        ]
+    },
+    "status_code": 422
 }
 ```
 
@@ -431,7 +520,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"first_name\": \"\" [required], \n \"middle_name\": \"\"[optional] , \n \"last_name\": \"\" [required], \n \"gender\": \"\" [required], \n \"dob\": \"\" [required], \n \"email\": \"\" [required id mobile is not set], \n \"mobile\": \"\" [required if email is not set], \n \"country\": \"Nigeria\", \n \"mothers_maiden_name\": \"\",[optional] \n \"previous_last_name\": \"\",[optional] \n \"nationality\": \"\",[optional] \n \"country_of_birth\": \"\",[optional] \n \"town_of_birth\": \"\"[optional] \n}"
+  "body": "{ \n \"first_name\": \"\" [required], \n \"middle_name\": \"\"[optional] , \n \"last_name\": \"\" [required], \n \"gender\": \"\" [optional], \n \"dob\": \"\" [optional], \n \"email\": \"\" [required if mobile is not set], \n \"mobile\": \"\" [required if email is not set], \n \"country\": \"Nigeria\", \n \"mothers_maiden_name\": \"\",[optional] \n \"previous_last_name\": \"\",[optional] \n \"nationality\": \"\",[optional] \n \"country_of_birth\": \"\",[optional] \n \"town_of_birth\": \"\"[optional] \n}"
 }
 ```
 
@@ -4568,8 +4657,8 @@ This endpoint cancels an initiated call.
 
 ```json http
 {
-  "method": "get",
-  "url": "https://api.staging.youverify.co/v1/reports/{{report_id}}/cancel",
+  "method": "post",
+  "url": "https://api.staging.youverify.co/v1/reports/%7Breport_id%7D/cancel",
   "headers": {
     "Token": "{{token}}",
     "Content-Type": "application/json"
@@ -5079,7 +5168,6 @@ ADDRESS RESPONSE PAYLOAD
 ```
 
 NB: Please note that that the above symbol " | " is used to differentiate the possible outcomes.
-
 
 ## Error Codes
 
