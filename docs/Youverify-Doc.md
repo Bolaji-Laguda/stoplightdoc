@@ -9,7 +9,7 @@
 -   All sample requests in this documentation are formatted for cURL.
 -   All parameters, where relevant, are required unless otherwise specified.
 -   If you have questions about using the API, want to share some feedback, or have come across a bug you'd like to report, write us an email at [developer@youverify.co](mailto:developer@youverify.co)
--   Youverify API uses key based authentication method. You can get a key from settings(<https://developer.youverify.co>)
+-   Youverify API uses key based authentication method. You can get a key from settings(<https://developer.youverify.co>).
 
 ## Nigerian International Passport (NIP)
 
