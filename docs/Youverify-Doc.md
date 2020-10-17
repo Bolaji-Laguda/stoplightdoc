@@ -570,7 +570,7 @@ Request Sample
 ```json http
 {
   "method": "post",
-  "url": "https://api.staging.youverify.co/v1/candidates/%7Bcandidate_id%7D/live_photo",
+  "url": "https://api.staging.youverify.co/v1/candidates/{candidate_id}/live_photo",
   "headers": {
     "Content-Type": "application/json",
     "Token": "{{token}}"
