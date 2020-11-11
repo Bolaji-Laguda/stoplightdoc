@@ -724,7 +724,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"notes\":\"\", \n \"reference\": { \"first_name\": \"\", [required] \n \"last_name\": \"\", [required] \"email\": \"\", [required] \n \"mobile\": \"\", [required] \n \"image\": [\"base64 encoded image/logo or url of image/logo\"] [required] \n }, \n \"address\": { \"flat_number\": \"\", [optional] \n \"building_name\": \"\", [optional] \n \"building_number\": \"\", [optional] \n \"street\": \"\",[required] \n \"sub_street\": \"\", [optional] \n \"landmark\": \"\", [required] \n \"state\":\"\", [required] \n \"city\": \"\", [required] \n \"postcode\": \"\", [optional] \n \"country\": \"Nigeria\" [required] \n }, \n}"
+  "body": "{ \n \"notes\":\"\", \n \"reference\": { \"first_name\": \"\", [required] \n \"last_name\": \"\", [required] \"email\": \"\", [required] \n \"mobile\": \"\", [required] \n \"image\": [\"base64 encoded image/logo or url of image/logo\"] [required] \n }, \n \"address\": { \"flat_number\": \"\", [optional] \n \"building_name\": \"\", [optional] \n \"building_number\": \"\", [required] \n \"street\": \"\",[required] \n \"sub_street\": \"\", [optional] \n \"landmark\": \"\", [required] \n \"state\":\"\", [required] \n \"city\": \"\", [required] \n \"postcode\": \"\", [optional] \n \"country\": \"Nigeria\" [required] \n }, \n}"
 }
 ```
 
@@ -852,33 +852,12 @@ Request Sample
 ```json http
 {
   "method": "post",
-  "url": "https://api.staging.youverify.co/v1/candidates/{{candidate_id}}/merchants",
+  "url": "https://api.staging.youverify.co/v1/candidates/%7Bcandidate_id%7D/merchants",
   "headers": {
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": {
-    "merchant": {
-      "name": "Anthony",
-      "registration_number": "1530-03089-0393993",
-      "email": "anthony@gm.com",
-      "mobile": "09123449908"
-    },
-    "address": {
-      "flat_number": "",
-      "building_name": "",
-      "building_number": "13b",
-      "landmark": "Ilupeju Police Station",
-      "street": "Bishop street",
-      "sub_street": "",
-      "digital_address_code": "",
-      "nipost_address": "",
-      "state": "Lagos",
-      "city": "Ilupeju",
-      "postcode": "",
-      "country": "Nigeria"
-    }
-  }
+  "body": "{\n  \"merchant\": {\n    \"name\": \"Anthony\",\n    \"registration_number\": \"1530-03089-0393993\",\n    \"email\": \"anthony@gm.com\",\n    \"mobile\": \"09123449908\"\n  },\n  \"address\": {\n    \"flat_number\": \"\",\n    \"building_name\": \"\",\n    \"building_number\": \"13b\",[required]\n    \"landmark\": \"Ilupeju Police Station\",[required]\n    \"street\": \"Bishop street\",[required]\n    \"sub_street\": \"\",\n    \"digital_address_code\": \"\",\n    \"nipost_address\": \"\",\n    \"state\": \"Lagos\",[required]\n    \"city\": \"Ilupeju\",[required]\n    \"postcode\": \"\",\n    \"country\": \"Nigeria\"[required]\n  }\n}"
 }
 ```
 
