@@ -1,7 +1,5 @@
 # Youverify Documentation
 
-## Identity Verification API's
-
 -   The Youverify API is a RESTful web service for developers to programmatically interact with Youverify’s data and functionality.
 -   Every bit of data exchanged between clients and the API is JSON over HTTPS.
 -   The base URL for the Youverify Staging API is <https://api.staging.youverify.co> while the live API endpoint is <https://api.youverify.co>,
@@ -10,6 +8,8 @@
 -   All parameters, where relevant, are required unless otherwise specified.
 -   If you have questions about using the API, want to share some feedback, or have come across a bug you'd like to report, write us an email at [developer@youverify.co](mailto:developer@youverify.co)
 -   Youverify API uses key based authentication method. You can get a key from settings(<https://developer.youverify.co>).
+
+## Identity Verification API's
 
 ## Nigerian International Passport (NIP)
 
@@ -496,6 +496,249 @@ MN:
 
 LN: Doe
 
+## National Identity Number Verification with Facial Match (NIN Facial)
+
+This endpoint allows you to verify a NIN ID with a Facial match.
+
+Request Sample
+
+```json http
+{
+  "method": "post",
+  "url": "https://api.staging.youverify.co/v1/identities/candidates/check",
+  "headers": {
+    "Content-Type": "application/json",
+    "Token": "{{token}}"
+  },
+  "body": {
+    "report_type": "identity",
+    "type": "nin_facial",
+    "reference": "xxxxxxxxxx",
+    "image": "{{base64 image}}",
+    "subject_consent": true
+  }
+}
+```
+
+Successful response
+
+```json
+{
+    "data": {
+        "id": "reports_d5185a8d-5c17-474a-ab5f-ee74c61b499b",
+        "reference_id": "5fb26a019a504",
+        "response": {
+            "first_name": "John",
+            "last_name": "Doe",
+            "middle_name": "Michael",
+            "dob": "01-01-1990",
+            "mobile": "08111111111",
+            "reference_id": "00000000279",
+            "batch_id": null,
+            "birth_country": "nigeria",
+            "birth_lga": "Ikorodu",
+            "birth_state": "Lagos",
+            "card_status": null,
+            "central_id": "8817188",
+            "document_no": null,
+            "educational_level": "secondary",
+            "employment_status": null,
+            "gender": "m",
+            "height": null,
+            "maiden_name": null,
+            "marital_status": "single",
+            "nok_address1": "****",
+            "nok_address2": "",
+            "nok_firstname": "****",
+            "nok_lga": "****",
+            "nok_state": "****",
+            "nok_surname": "****",
+            "nok_town": "****",
+            "nspokenlang": "YORUBA",
+            "ospokenlang": "****",
+            "photo": "/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a\nHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy\nMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAHSAV4DASIA\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4e",
+            "face_details": {
+                "confidence": 89.78,
+                "threshold": 70,
+                "request_image": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wgARCAQ4AyoDASIAAhEBAxEB/8QAGgABAQEBAQEBAAAAAAAAAAAAAAECAwQFBv/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/9oADAMBAAIQAxAAAAL7dlyAAAAAAAAAAAQKlAAAAAAAAAAAAAAAAAAACCoKliWBQELAFIB8/wCh86X4/Lpm3N6w5dufZfodc+znfEFzZokEmNyvsU6cwAAAAAAAAABCgAAAAAAAAAAAAAAAAAAAJSWAIWACikIAAAnzfpfOl+Hnvm3LVOXo5+iX6Xt8nrw8EVrFlICET7I68wAAAAAAAAEsAFAAAAAAAAAgWUAAAAAJQCUBIWAAABYLLAABKEonzvo+HN+e+2r4t+1D4z7Xhl37PJ0zfLJWoDKiS5k+zY687FoQqUAAAEKQqBYAFgoAAAAABCoKQVCgAAAEKgqCogAAAAABYAAAAJ4fd8/N9ossKvg9/gzrd5ZxsWs2UiUkQ+yOnKwooIKCAoIoiwLAILKKABCoKgqCkLFIsLCAAAALLKsIAFIAAAAsAFgsAAAACfP+h8/N9osKqeD3+DOrcTO1zoysICA+wOnKoCyllAIolAQCAAAKloA"
+            },
+            "profession": "STUDENT",
+            "religion": "christianity",
+            "residence_adress_line1": null,
+            "residence_town": null,
+            "residence_lga": "Ibadan South West",
+            "residence_state": "Oyo",
+            "residence_status": "birth",
+            "self_origin_lga": "Ikorodu",
+            "self_origin_place": "****",
+            "self_origin_state": "Lagos",
+            "signature": "/9j/4AAQSkZJRgABAQEAlgkWAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a\nHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy\nMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADIAPoDASIA\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm\np6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA\nAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx\nBhJBUQdhcRMiMoEIF",
+            "title": "mr",
+            "tracking_id": "S7K0OG3150014AZ"
+        },
+        "type": "nin_facial",
+        "task_created_by": "Chinook Devops"
+    },
+    "message": "Successful",
+    "status_code": 200
+}
+```
+
+Failed response
+
+```json
+{
+    "message": "Undefined index: confidence",
+    "status_code": 500
+}
+```
+
+#### NIN Test Data
+
+ID Number: 11111111111
+
+DOB: 1988-04-04
+
+FN: Sarah
+
+MN: Jane
+
+LN: Doe
+
+## Tax Identification Number (TIN)
+
+This endpoint allows you to verify a Tax dentification number
+
+Request sample
+
+```json http
+{
+  "method": "post",
+  "url": "https://api.staging.youverify.co/v1/identities/candidates/check",
+  "headers": {
+    "Content-Type": "application/json",
+    "Token": "{{token}}"
+  },
+  "body": {
+    "report_type": "identity",
+    "type": "tin",
+    "reference": "00000000-0001",
+    "subject_consent": true
+  }
+}
+```
+
+Successful response
+
+```json
+{
+    "data": {
+        "id": "reports_1d63b3ce-38f7-4eb4-8759-539292f2ca7d",
+        "reference_id": "xxxxxxxxxx",
+        "response": {
+            "full_name": "xxxxxxxxxxxxxxxxxxxxx",
+            "tax_identification_number": "00000000-0001",
+            "verified": true
+        },
+        "type": "tin",
+        "task_created_by": "Chinook Devops"
+    },
+    "message": "Successful",
+    "status_code": 200
+}
+```
+
+Failed response
+
+    {
+        "message": "Service is curently unavailable, please try again in ten minutes or contact support",
+        "status_code": 503
+    }
+
+## Bank Account Verification
+
+This endpoint allows you verify a bank account.
+
+To generate the list of Banks.
+
+Request sample
+
+```json http
+{
+  "method": "get",
+  "url": "https://api.staging.youverify.co/v1/identities/banks",
+  "headers": {
+    "Token": "{{token}}"
+  }
+}
+```
+
+To verify bank account.
+
+Request sample
+
+```json http
+{
+  "method": "get",
+  "url": "https://api.staging.youverify.co/v1/identities/banks/verify_account",
+  "headers": {
+    "Content-Type": "application/json",
+    "Token": "{{token}}"
+  },
+  "body": {
+    "account_number": "0111101011",
+    "bank_code": "058",
+    "subject_consent": true
+  }
+}
+```
+
+Successful response
+```json
+{
+    "data": {
+        "id": "reports_efd61da7-94cd-b1e7-ea3585a6158a",
+        "reference_id": "5fb17b1d00083",
+        "subject_consent": true,
+        "candidate": {
+            "id": "0da849a9-e6b3-9c19-25e8c0d7a878",
+            "reference_id": "YV5fb17b1d092492817",
+            "full_name": "John Michael Doe",
+            "bank_name": "xxxxxx Bank",
+            "account_number": "xxxxxxxxx",
+            "bank_code": "058"
+        },
+        "status": "completed",
+        "identity_status": "VERIFIED",
+        "identity_number": "xxxxxxxxx",
+        "package": "identity",
+        "package_name": "Identity",
+        "type": "bank_account_verification",
+        "business": "Youcheck Online Services Limited",
+        "task_created_by": "Inc Youverify",
+        "end_time": "2020-11-15",
+        "created_at": "2020-11-15 20:01:49",
+        "images": {
+            "data": []
+        }
+    },
+    "message": "Successful",
+    "status_code": 200
+}
+```
+Failed response
+
+```json
+{
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "account_number": [
+            "The account number must be 10 digits."
+        ]
+    },
+    "status_code": 422
+}
+```
 ## Address Verification API's
 
 There are three types of address verification; 
