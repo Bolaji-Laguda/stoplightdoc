@@ -743,7 +743,7 @@ Failed response
 
 There are three types of address verification; 
 
-1.  Live Photo Address verification - Individual Address check 
+1.  Individual Address verification - Individual Address check 
 2.  Reference Address Verification - Individual Guarantor's Address Check 
 3.  Business Address Verification
 
@@ -804,7 +804,7 @@ Response
 
 ### 2. Request for Address Verification using the candidate_id
 
-#### A. Live Photo Address Verification - Individual Address Check
+#### A. Individual Address Verification - Individual Address Check
 
 This endpoint initiates an address verification.
 
