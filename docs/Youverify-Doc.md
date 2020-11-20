@@ -694,6 +694,7 @@ Request sample
 ```
 
 Successful response
+
 ```json
 {
     "data": {
@@ -726,6 +727,7 @@ Successful response
     "status_code": 200
 }
 ```
+
 Failed response
 
 ```json
@@ -739,6 +741,7 @@ Failed response
     "status_code": 422
 }
 ```
+
 ## Address Verification API's
 
 There are three types of address verification; 
@@ -962,7 +965,7 @@ Request Sample
 ```json http
 {
   "method": "post",
-  "url": "https://api.staging.youverify.co/v1/candidates/%7Bcandidate_id%7D/references",
+  "url": "https://api.staging.youverify.co/v1/candidates/{candidate_id}/references",
   "headers": {
     "Content-Type": "application/json",
     "Token": "{{token}}"
