@@ -25,7 +25,7 @@ Request Sample
     "Content-Type": "application/json",
     "Token": "{{token}}"
   },
-  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required][alphanumeric]\n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"subject_consent\": true [required] [Boolean] \n}"
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"passport\", \n \"reference\": \"Axxxxxxxx\", [required][alphanumeric]\n \"last_name\": \"John\", [ required ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"subject_consent\": true [required] [Boolean] \n}"
 }
 ```
 
