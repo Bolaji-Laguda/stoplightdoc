@@ -588,8 +588,13 @@ Failed response
 
 ```json
 {
-    "message": "Undefined index: confidence",
-    "status_code": 500
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "reference": [
+            "The reference field is required."
+        ]
+    },
+    "status_code": 422
 }
 ```
 
@@ -650,10 +655,17 @@ Successful response
 
 Failed response
 
-    {
-        "message": "Service is curently unavailable, please try again in ten minutes or contact support",
-        "status_code": 503
-    }
+```json
+{
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "reference": [
+            "The reference field is required."
+        ]
+    },
+    "status_code": 422
+}
+```
 
 ## Bank Account Verification
 
