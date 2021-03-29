@@ -753,8 +753,6 @@ Failed response
     "status_code": 422
 }
 ```
-
-
 ## Address Verification API's
 
 There are three types of address verification; 
