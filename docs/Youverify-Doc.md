@@ -496,7 +496,7 @@ MN:
 
 LN: Doe
 
-## National Identity Number Verification with Facial Match (NIN Facial)
+## National Identity Number with Facial Match (NIN Facial)
 
 This endpoint allows you to verify a NIN ID with a Facial match.
 
@@ -609,6 +609,93 @@ FN: Sarah
 MN: Jane
 
 LN: Doe
+
+## Nigerian International Passport with Facial Match (Passport Facial)
+
+This endpoint allows you to verify a Passport ID with a Facial match.
+
+Request Sample
+
+```json http
+{
+  "method": "post",
+  "url": "https://api.staging.youverify.co/v1/identities/candidates/check",
+  "headers": {
+    "Content-Type": "application/json",
+    "Token": "{{token}}"
+  },
+  "body": {
+    "report_type": "identity",
+    "type": "passport_facial",
+    "reference": "xxxxxxxxxx",
+    "image": "{{base64 image}}",
+    "subject_consent": true
+  }
+}
+```
+
+Successful response
+
+```json
+{
+    "data": {
+        "id": "reports_55c130dc-62a5-4603-849b-15fad5095ea8",
+        "reference_id": "6051334d658d1",
+        "response": {
+            "first_name": "JOHN",
+            "last_name": "DOE",
+            "middle_name": "MICHAEL",
+            "dob": "1994-10-11",
+            "mobile": null,
+            "photo": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAw//Z",
+            "face_details": {
+                "confidence": 97.39,
+                "threshold": 70,
+                "request_image": "/9j/4AAQSkZJRgABAQEAkACQAAD/4QDARXhpZgAASUkqAAgAAAAFABoBBQABAAAASgAAABsBBQABAAAAUgAAACgBAwABAAAAAgAAADEBAgALAAAAWgAAAGmHBAABAAAAZgAAAAAAAACQAAAAAQAAAJAAAAABAAAAUGhvdG9TY2FwZQAABACGkgcAHAAAAJwAAAABoAMAA//Z"
+            },
+            "gender": "Male",
+            "issued_at": "ABUJA",
+            "issued_date": "2020-04-02",
+            "expiry_date": "2025-03-02",
+            "reference_id": "A11167529"
+        },
+        "type": "passport_facial",
+        "task_created_by": "Chinook Devops"
+    },
+    "message": "Successful",
+    "status_code": 200
+}
+```
+
+Failed response
+
+```json
+{
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "reference": [
+            "The reference field is required."
+        ],
+        "image": [
+            "The image field is required."
+        ]
+    },
+    "status_code": 422
+}
+```
+
+#### NIP Test Data
+
+ID Number: A11111111
+
+DOB: 1988-04-04
+
+FN: Sarah
+
+MN: Jane
+
+LN: Doe
+
 
 ## Tax Identification Number (TIN)
 
