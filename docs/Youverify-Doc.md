@@ -627,7 +627,7 @@ Request Sample
   "body": {
     "report_type": "identity",
     "type": "passport_facial",
-    "reference": "xxxxxxxxxx",
+    "reference": "Axxxxxxxxx",
     "image": "{{base64 image}}",
     "subject_consent": true
   }
@@ -657,7 +657,7 @@ Successful response
             "issued_at": "ABUJA",
             "issued_date": "2020-04-02",
             "expiry_date": "2025-03-02",
-            "reference_id": "A11167529"
+            "reference_id": "Axxxxxxxx"
         },
         "type": "passport_facial",
         "task_created_by": "Chinook Devops"
