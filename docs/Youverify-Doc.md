@@ -754,6 +754,17 @@ Failed response
 }
 ```
 
+## Phone Number Verification
+
+This endpoint allows you to verify a Nigerian Phone number.
+
+```json http
+{
+  "method": "get",
+  "url": "https://todos.stoplight.io/todos"
+}
+```
+
 ## Address Verification API's
 
 There are three types of address verification; 
