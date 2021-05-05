@@ -696,7 +696,6 @@ MN: Jane
 
 LN: Doe
 
-
 ## Tax Identification Number (TIN)
 
 This endpoint allows you to verify a Tax dentification number
@@ -840,6 +839,124 @@ Failed response
     "status_code": 422
 }
 ```
+
+## Company Search
+
+This endpoint allows you to search for registered companies.
+
+Request Sample
+
+```json http
+{
+  "method": "post",
+  "url": "https://api.staging.youverify.co/v1/backgrounds/cac",
+  "headers": {
+    "Content-Type": "application/json",
+    "Token": "{{token}}"
+  },
+  "body": {
+	"company_name":"Youcheck Online Services Ltd"
+}
+}
+```
+
+Successful Response
+
+```json
+{
+    "data": {
+        "id": "reports_7918e7f5-6015-41f0-b34c-a57055fbe98b",
+        "reference_id": "60280583a4f12",
+        "start_time": "2021-04-27",
+        "end_time": "2021-04-27",
+        "execution_date": "",
+        "submitted_at": "",
+        "status": "completed",
+        "task_status": "PENDING",
+        "reason": "",
+        "task_created_by": "xxxxxxxxxxxxxxx",
+        "package": "company_check",
+        "download_url": "http://127.0.0.1:8000/v1/reports/reports_7918e7f5-6015-41a0-b34c-a58055ebe08b/download/pdf",
+        "description": "",
+        "package_name": "Company Verification",
+        "details": {
+            "id": 30,
+            "uuid": "background-745b42fd-5975-4863-9f12-e0090c7fe773",
+            "background_type": "cac",
+            "background_id": 42,
+            "search_id": "RC 1418005",
+            "user_id": "35",
+            "model_id": "1",
+            "model_type": "partners",
+            "status": "completed",
+            "reason_for_fail": null,
+            "deleted_at": null,
+            "created_at": "2021-04-27 13:37:23",
+            "updated_at": "2021-04-27 13:37:23",
+            "background_model": {
+                "uuid": "cac-eff922ca-061d-4cc7-956f-ec5d6b03b406",
+                "task_id": "60880583b126ce1c8acbea62",
+                "search_type": "manual",
+                "status": "VERIFIED",
+                "name_of_company": "YOUCHECK ONLINE SERVICES LTD",
+                "data": {
+                    "message": "Success",
+                    "data": {
+                        "_id": "60880583b126ce1c8acbea62",
+                        "name": "YOUCHECK ONLINE SERVICES LTD",
+                        "status": "Unknown",
+                        "activity": "Information service activities",
+                        "registrationNumber": "RC 1418005",
+                        "registrationDate": "09 Jun 2017",
+                        "address": "13B BISHOP STREET,  OFF COKER ROAD,  ILUPEJU,  LAGOS STATE",
+                        "state": "LAGOS",
+                        "lga": "KOSOFE",
+                        "city": "LAGOS",
+                        "phoneNumber": "",
+                        "websiteEmail": "xxxxxxxxxxxxxxxxxx",
+                        "branchAddress": "",
+                        "headOfficeAddress": "",
+                        "objectives": "",
+                        "createdAt": "2021-04-27T12:37:23.447Z",
+                        "updatedAt": "2021-04-27T12:37:23.447Z",
+                        "__v": 0
+                    }
+                },
+                "registration_number": "RC 1418005",
+                "found_company_name": null,
+                "date_of_change_of_name": null,
+                "memorandum_of_association_url": null,
+                "additional_comments": null,
+                "deleted_at": null,
+                "created_at": "2021-04-27 13:37:23",
+                "updated_at": "2021-04-27 13:37:23"
+            }
+        },
+        "has_address": false,
+        "reportable_id": "background-735b42fd-5975-4863-9f12-e0095c7fe773",
+        "last_updated_at": "2021-04-27 13:37:23",
+        "can_view_report": true,
+        "business": "Youverify Chinook",
+        "created_at": "2021-04-27 13:37:23",
+        "images": {
+            "data": []
+        }
+    },
+    "message": "Successful",
+    "status_code": 200
+}
+```
+
+Failed response
+
+```json
+{
+    "message": "No result found",
+    "code": 404,
+    "status_code": 400
+}
+```
+
 ## Address Verification API's
 
 There are three types of address verification; 
