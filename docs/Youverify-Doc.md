@@ -840,7 +840,7 @@ Failed response
 }
 ```
 
-## Company Search
+## Company Search (CAC)
 
 This endpoint allows you to search for registered companies.
 
