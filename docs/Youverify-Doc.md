@@ -860,7 +860,7 @@ Request Sample
 }
 ```
 
-Successful Response
+Successful response
 
 ```json
 {
@@ -956,6 +956,7 @@ Failed response
     "status_code": 400
 }
 ```
+
 
 ## Address Verification API's
 
