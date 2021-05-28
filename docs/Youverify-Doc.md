@@ -154,6 +154,8 @@ DOB: 04-04-1988
 
 This endpoints allows you to verify a BVN ID.
 
+NB. Please note that "bvn" does not return an image (Boolean) while "ibvn" returns and image. 
+
 Request Sample
 
 ```json http
