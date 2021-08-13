@@ -4892,7 +4892,7 @@ This endpoint returns the details of a report.
 ```json http
 {
   "method": "get",
-  "url": "https://api.staging.youverify.co/v1/reports/{report_id}",
+  "url": "https://api.staging.youverify.co/v1/reports/{id}",
   "headers": {
     "Token": "{{token}}"
   }
