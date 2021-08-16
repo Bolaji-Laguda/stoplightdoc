@@ -150,11 +150,10 @@ LN: Doe
 
 DOB: 04-04-1988
 
-## Bank Verification Number (BVN)
+## Bank Verification Number with Image (IBVN)
 
-This endpoints allows you to verify a BVN ID.
-
-**NB**. Please note that "bvn" does not return an image (Boolean) while "ibvn" returns an image. 
+This endpoints allows you to verify the BVN Identity with Images.
+ 
 
 Request Sample
 
@@ -196,6 +195,8 @@ Successful response
 Failed response
 
 ```json
+
+
 {
     "message": "422 Unprocessable Entity",
     "errors": {
@@ -218,6 +219,76 @@ FN: John
 MN: 
 
 LN: Doe
+
+
+## Bank Verification Number (BVN) without Image
+
+This endpoints allows you to verify the BVN Identity without Images.
+ 
+
+Request Sample
+
+```json http
+{
+  "method": "post",
+  "url": "https://api.staging.youverify.co/v1/identities/candidates/check",
+  "headers": {
+    "Content-Type": "application/json",
+    "Token": "{{token}}"
+  },
+  "body": "{ \n \"report_type\": \"identity\", \n \"type\": \"bvn\", \n \"reference\": \"xxxxxxxxxxx\", [required][String]\n \"last_name\": \"John\", [ optional ] \n \"first_name\": \"Doe\", [ optional ] \n \"dob\": \"2000-01-01\", [ optional ] \n \"subject_consent\": true [required] [Boolean] \n}"
+}
+```
+
+Successful response
+
+```json
+{ 
+"data": { 
+"id": "reports_65376e11-387e-4e54-b2d9-7511bba9080d", 
+"reference_id": "5d89e45394fc1", 
+"response": { 
+"first_name": "JOHN", 
+"middle_name": "", 
+"mobile": "xxxxxxxxxx", 
+"last_name": "DOE", 
+"dob": "01-Jan-00", 
+"type": "ibvn", 
+"task_created_by": "Inc Youverify" 
+}, 
+"message": "Successful", 
+"status_code": 200 
+}
+```
+
+Failed response
+
+```json
+
+
+{
+    "message": "422 Unprocessable Entity",
+    "errors": {
+        "reference": [
+            "The reference field is required."
+        ]
+    },
+    "status_code": 422
+}
+```
+
+#### BVN Test Data
+
+ID Number: 11111111111 
+
+DOB: 1988-04-04 
+
+FN: John 
+
+MN: 
+
+LN: Doe
+
 
 ## Nigerian Driver's License (NDL)
 
