@@ -15,7 +15,7 @@
 
 This endpoint lets you verify a passport ID.
 
-Request Sample
+Request Sample.
 
 ```json http
 {
