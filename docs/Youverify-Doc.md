@@ -1,9 +1,16 @@
 # Youverify Documentation
+## Welcome! This is Youverify's documentation page
 
--   The Youverify API is a RESTful web service for developers to programmatically interact with Youverify’s data and functionality.
--   Every bit of data exchanged between clients and the API is JSON over HTTPS.
--   The base URL for the Youverify Staging API is <https://api.staging.youverify.co> while the live API endpoint is <https://api.youverify.co>,
--   All endpoint should be prefix with v1 e.g <https://api.staging.youverify.co/v1> for staging and while live is <https://api.youverify.co/v1>
+The Youverify API is a RESTful web service for developers to programmatically interact with Youverify’s data and functionality.
+Every bit of data exchanged between clients and the API is JSON over HTTPS.
+
+## Environments
+
+We offer both Staging and Production environments. You may leverage our Staging environment to test your integration in a number of scenarios. The Staging and Production environments function similarly, with the difference that sample data can only be used in the staging environment.
+
+-   The base URL for the Youverify staging API is <https://api.staging.youverify.co> 
+- The live API endpoint is <https://api.youverify.co>
+-   All endpoints should be prefix with v1 e.g <https://api.staging.youverify.co/v1> for staging and while live is <https://api.youverify.co/v1>
 -   All sample requests in this documentation are formatted for cURL.
 -   All parameters, where relevant, are required unless otherwise specified.
 -   If you have questions about using the API, want to share some feedback, or have come across a bug you'd like to report, write us an email at [developer@youverify.co](mailto:developer@youverify.co)
@@ -11,7 +18,21 @@
 
 ## Identity Verification API's
 
-## Nigerian International Passport (NIP)
+The Identity Verification API allows you to validate an individual's identity information by utilizing their personal information and ID number from one of our supported ID Types. This API will return a comprehensive information available about the individual.
+
+### Request Values
+
+Name | Type | Description
+---------|----------|---------
+ report_type | String | Specific youverify service type.
+ type | String | Specific identity type.
+ reference | String | Required identification number.
+last_name | String| Candidate's last name.
+first_name | String| Candidate's first name.
+dob | String | Candidate's date of birth.
+subject_constent |Boolean| Candidate consent to the verification.
+
+### Nigerian International Passport (NIP)
 
 This endpoint lets you verify a passport ID.
 
@@ -29,7 +50,7 @@ Request Sample.
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
  { 
@@ -58,7 +79,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 {
@@ -84,7 +105,7 @@ MN: Jane
 
 LN: Doe
 
-## Permanent Voters Card (PVC)
+### Permanent Voters Card (PVC)
 
 This endpoint allows you to verify a PVC ID.
 
@@ -102,7 +123,7 @@ Request Sample
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
 {
@@ -126,7 +147,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 {
@@ -150,7 +171,7 @@ LN: Doe
 
 DOB: 04-04-1988
 
-## Bank Verification Number with Image (IBVN)
+### Bank Verification Number with Image (IBVN)
 
 This endpoints allows you to verify the BVN Identity with Images.
  
@@ -169,7 +190,7 @@ Request Sample
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
 { 
@@ -192,7 +213,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 
@@ -221,7 +242,7 @@ MN:
 LN: Doe
 
 
-## Bank Verification Number (BVN) without Image
+### Bank Verification Number (BVN) without Image
 
 This endpoints allows you to verify the BVN Identity without Images.
  
@@ -240,7 +261,7 @@ Request Sample
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
 { 
@@ -261,7 +282,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 
@@ -290,7 +311,7 @@ MN:
 LN: Doe
 
 
-## Nigerian Driver's License (NDL)
+### Nigerian Driver's License (NDL)
 
 This endpoint allows you to verify driver's license number.
 
@@ -310,7 +331,7 @@ Request Sample
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
  { 
@@ -354,7 +375,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 {
@@ -389,7 +410,7 @@ MN: Michael
 
 LN: Doe
 
-## National Identity Number (NIN)
+### National Identity Number (NIN)
 
 This endpoint verifies a National identity number.
 
@@ -466,7 +487,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 {
@@ -492,7 +513,7 @@ MN: Jane
 
 LN: Doe
 
-## Bank Verification Number with Facial Match (BVN Facial)
+### Bank Verification Number with Facial Match (BVN Facial)
 
 This endpoint allows you to verify a BVN ID with a Facial match.
 
@@ -510,7 +531,7 @@ Request Sample
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
 { 
@@ -540,7 +561,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 {
@@ -569,7 +590,7 @@ MN:
 
 LN: Doe
 
-## National Identity Number with Facial Match (NIN Facial)
+### National Identity Number with Facial Match (NIN Facial)
 
 This endpoint allows you to verify a NIN ID with a Facial match.
 
@@ -593,7 +614,7 @@ Request Sample
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
 {
@@ -657,7 +678,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 {
@@ -683,7 +704,7 @@ MN: Jane
 
 LN: Doe
 
-## Nigerian International Passport with Facial Match (Passport Facial)
+### Nigerian International Passport with Facial Match (Passport Facial)
 
 This endpoint allows you to verify a Passport ID with a Facial match.
 
@@ -707,7 +728,7 @@ Request Sample
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
 {
@@ -740,7 +761,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 {
@@ -769,7 +790,7 @@ MN: Jane
 
 LN: Doe
 
-## Tax Identification Number (TIN)
+### Tax Identification Number (TIN)
 
 This endpoint allows you to verify a Tax dentification number
 
@@ -792,7 +813,7 @@ Request sample
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
 {
@@ -812,7 +833,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 {
@@ -826,7 +847,7 @@ Failed response
 }
 ```
 
-## Bank Account Verification
+### Bank Account Verification
 
 This endpoint allows you verify a bank account.
 
@@ -864,7 +885,7 @@ Request sample
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
 {
@@ -933,7 +954,7 @@ Request Sample
 }
 ```
 
-Successful response
+Successful response:
 
 ```json
 {
@@ -1020,7 +1041,7 @@ Successful response
 }
 ```
 
-Failed response
+Failed response:
 
 ```json
 {
