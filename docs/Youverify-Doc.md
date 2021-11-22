@@ -871,7 +871,7 @@ Request sample
 
 ```json http
 {
-  "method": "get",
+  "method": "post",
   "url": "https://api.staging.youverify.co/v1/identities/banks/verify_account",
   "headers": {
     "Content-Type": "application/json",
